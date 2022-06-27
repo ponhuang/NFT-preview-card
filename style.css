@@ -1,0 +1,149 @@
+/* COLORS */
+:root {
+  --cyan: hsl(178, 100%, 50%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dar-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* BASE */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Outfit", sans-serif;
+  color: var(--soft-blue);
+  background-color: var(--very-dark-blue-main);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40rem;
+  border-radius: 15px;
+  background-color: var(--very-dar-blue-card);
+  padding: 2rem 0;
+  margin: 5rem auto;
+}
+
+img {
+  display: block;
+  width: 90%;
+  border-radius: 10px;
+}
+
+.content {
+  padding: 2.5rem;
+}
+
+/* ITEM INFO SECTION */
+.item-info {
+  width: 90%;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--cyan);
+}
+
+.text {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* PRICE INFO SECTION */
+.price-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.price-info::after {
+  content: "";
+  width: 90%;
+  height: 1px;
+  background-color: var(--soft-blue);
+}
+
+.price-info-left {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.price-info-left img {
+  width: 1rem;
+}
+
+.price {
+  color: var(--cyan);
+}
+
+.price-info-right {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.price-info-right img {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+.author-info img {
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 100px;
+  border: 1px solid var(--white);
+  margin-right: 1.5rem;
+}
+
+.author a {
+  text-decoration: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.author a:hover {
+  color: var(--cyan);
+}
+
+/* FOOTER SECTION */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--very-dark-blue);
+}
+.attribution a {
+  color: var(--soft-blue);
+}
