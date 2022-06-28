@@ -38,17 +38,54 @@ body {
   margin: 5rem auto;
 }
 
-img {
-  display: block;
-  width: 90%;
+/* ITEM IMAGE */
+
+.image-container {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  width: 36rem;
+  height: 36rem;
   border-radius: 10px;
 }
 
-.content {
-  padding: 2.5rem;
+.item-image {
+  display: block;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37rem;
+  height: 37rem;
+  background: var(--cyan);
+  opacity: 0.3;
+  visibility: hidden;
+}
+
+.view-icon {
+  width: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  visibility: hidden;
+}
+
+.image-container:hover .overlay,
+.image-container:hover .view-icon {
+  visibility: visible;
 }
 
 /* ITEM INFO SECTION */
+.content {
+  padding: 2.5rem 0;
+  width: 85%;
+}
+
 .item-info {
   width: 90%;
   margin-bottom: 2.5rem;
@@ -78,11 +115,14 @@ img {
   justify-content: space-between;
   font-size: 1.5rem;
   margin-bottom: 4rem;
+  position: relative;
 }
 
 .price-info::after {
   content: "";
-  width: 90%;
+  position: absolute;
+  top: 4rem;
+  width: 100%;
   height: 1px;
   background-color: var(--soft-blue);
 }
