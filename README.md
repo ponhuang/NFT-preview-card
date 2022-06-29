@@ -60,6 +60,7 @@ Author Link
 
 ### What I learned
 
+[ 1st version ]
 Learned how to overlay icon and color on the image.
 
 ```css
@@ -87,6 +88,27 @@ Learned how to overlay icon and color on the image.
 .image-container:hover .overlay,
 .image-container:hover .view-icon {
   visibility: visible;
+}
+```
+
+[ 2nd version ]
+Learn to use transition, so I changed the code to this:
+
+```css
+.overlay {
+  background-color: hsl(178, 100%, 50%, 40%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.view-icon {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.image-container:hover .overlay,
+.image-container:hover .view-icon {
+  opacity: 1;
 }
 ```
 
